@@ -1,16 +1,21 @@
-![Programação-Arquitetura Java](https://github.com/jacqueline-oliveira/3698-java-clean-architecture/assets/66698429/0191ea20-432f-4583-a391-f01558004fb9)
-![](https://img.shields.io/github/license/alura-cursos/android-com-kotlin-personalizando-ui)
+# Clean Architecture
+Este repositório é voltado ao aprendizado de como transformar um projeto **CRUD** padrão em um projeto voltado a arquitetura **Clean Architecture**.
 
-# CodeChella
+## Sobre Clean Architecture
+Tudo é criado com base em algum problema existente, então na minha concepção para se entender algo é preciso entender qual problema ele resolve.
 
-App de simulação de um site para venda de ingressos de eventos diversos
+Pensando desta maneira vamos pensar, qual problema a Arquitetura Limpa (Clean Architecture) resolve?.
+* Desacoplamento.
+* Testabilidade.
+* Fácil manutenção e mudanças no código, framework, banco de dados e etc.
 
-## 🔨 Objetivos do projeto
+Pense em um sistema onde tudo é acoplado. A sua classe de Entidade depende exclusivamente do Spring JPA, se por algum momento sua classe anotada com @Entity e todas as anotações do JPA precisar passar por alguma mudança, e por algum motivo você precisa mudar o ORM que está nela para outro. Quando tudo está acoplado você teria que criar totalmente a classe novamente, e por consequência a sua classe **Service** também estaria acoplada a sua Entidade, e o seu **Controller** acoplado a sua **Service** gerando assim uma mudança totalmente drástica somente para mudar um ORM, e por esse problema nasceu a arquitetura limpa.
 
-- Conhecer os diferentes tipos de arquitetura de software;
-- Aprender os princípios da Clean Architecture;
-- Implementar um projeto com separação de responsabilidades e isolamento do domínio;
-- Entender sobre entidades, objetos de valor, casos de uso, repositórios e controladores;
-- Analisar os prós e contras de arquiteturas que utilizam muitas camadas de abstração.
+Leia Mais: [Arquitetura Limpa](https://zup.com.br/blog/clean-architecture-arquitetura-limpa/)
+
+#Estrutura deste repositório
+O pacote criado **naousar** está armazenando todo nosso projeto, porém criado da forma padrão, um CRUD padrão, e a nossa missão é transformar este projeto em um projeto com arquitetura limpa, então iremos utilizar ela somente para fins de comparação.
+
+
 
 
