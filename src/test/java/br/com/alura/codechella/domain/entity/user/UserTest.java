@@ -31,7 +31,6 @@ public class UserTest {
     exception = assertThrows(IllegalArgumentException.class,
       () -> new User(null, "guilherme", LocalDate.of(1999, 2, 28), "gui@gmail.com")
     );
-
 	}
 
 }
