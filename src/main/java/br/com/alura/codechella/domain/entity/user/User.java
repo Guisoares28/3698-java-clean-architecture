@@ -18,28 +18,28 @@ public class User {
   
   public User(String cpf, String nome, LocalDate nascimento, String email) {
 
-    if(cpf == null || cpf.isBlank() || cpf.matches("^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$")){
-      throw new  IllegalArgumentException();
+    if(cpf == null || cpf.isBlank() || !cpf.matches("^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$")){
+      throw new  IllegalArgumentException("Formato de CPF inválido");
     }
 
     if(!verificarCpf(cpf)){
-      throw new  IllegalArgumentException();
+      throw new  IllegalArgumentException("CPF inválido");
     }
 
     if(nome == null || nome.isBlank()){
-      throw new  IllegalArgumentException();
+      throw new  IllegalArgumentException("Nome não pode ser nulo ou vazio");
     }
 
     if(nascimento == null) {
-      throw new  IllegalArgumentException();
+      throw new  IllegalArgumentException("Data de nascimento não pode ser nulo");
     }
 
     if (email == null || email.isBlank()) {
-      throw new  IllegalArgumentException();
+      throw new  IllegalArgumentException("Email não pode ser nulo ou vazio");
     }
 
     if(!verificarIdade(nascimento)){
-      throw new  IllegalArgumentException();
+      throw new  IllegalArgumentException("É necessário ser maior de idade para realizar seu cadastro");
     }
 
     this.cpf = cpf;
